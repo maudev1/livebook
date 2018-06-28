@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <title>Live Book 0.1</title>
+    <script src="https://unpkg.com/vue"></script>
+    <link href="./style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+  
+    <div id="book">
+        
+            <div clas="camp">
+    
+                <div >
+                    <ul class="pageCap1">
+
+                        <li><button  script="v-if" id="fonChangeLeft" type="submit" name="fonChangeLeft" v-model="fonChangeLeft"><</button></li>
+
+                        <li><input id="title" class="title" v-model="title" placeholder="edit me"></p></li>
+                           
+                        <li><input id="subTitle" class="subTitle" v-model="subTitle" placeholder="edit me"></li>
+                        
+                        <li><p><textarea id="cap" class="cap" maxlength="2400" v-model="cap" placeholder="edit-me"></textarea></p></li>
+                            <li><p v-if="seen">Agora você me viu</p></li>
+                    
+                    </ul>                
+                </div>
+               
+
+            </div>
+        </div>
+    </div>
+    
+    <script>
+    var app = new Vue({
+        el: '#book',
+        data:{
+            title: '',
+            subTitle:'',
+            cap:''
+            
+            
+        }
+    })
+  
+    </script>
+
+
+                
+               
+</body>
+</html>
