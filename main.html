@@ -1,54 +1,71 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    
+
     <meta charset="utf-8">
-    <title>Live Book 0.1</title>
-    <script src="https://unpkg.com/vue"></script>
-    <link href="./style.css" type="text/css" rel="stylesheet">
+    <title>Live Book 0.3</title>
+
+    <link href="main.css" type="text/css" rel="stylesheet">
+    <link href="theme.css" type="text/css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Hind+Vadodara|Kosugi+Maru|Libre+Baskerville|Lora" rel="stylesheet">
+
 </head>
+
 <body>
-  
-    <div id="book">
-        
-            <div clas="camp">
-    
-                <div >
-                    <ul class="pageCap1">
-
-                        <li><button  script="v-if" id="fonChangeLeft" type="submit" name="fonChangeLeft" v-model="fonChangeLeft"><</button></li>
-
-                        <li><input id="title" class="title" v-model="title" placeholder="edit me"></p></li>
-                           
-                        <li><input id="subTitle" class="subTitle" v-model="subTitle" placeholder="edit me"></li>
-                        
-                        <li><p><textarea id="cap" class="cap" maxlength="2400" v-model="cap" placeholder="edit-me"></textarea></p></li>
-                            <li><p v-if="seen">Agora você me viu</p></li>
-                    
-                    </ul>                
-                </div>
-               
-
-            </div>
+    <script src="vue.js"></script>
+    <div id="page">
+        <div class="controls">
+            <button class="btn default" v-on:click="color = 'default'"></button>
+            <button class="btn desert-sand" v-on:click="color = 'desert-sand'"></button>
+            <button class="btn dark-green" v-on:click="color = 'dark-green'"></button>
         </div>
+
+        <form class="page" v-bind:class="color">
+            <input type="text" class="title" v-bind:class="color" v-model="title">
+            <input type="text" class="subTitle" v-bind:class="color" v-model="subTitle">
+            <textarea class="paragraph" v-bind:class="color" v-model="paragraph"></textarea>
+        </form>
+        <div class="footer"></div>
     </div>
+
     
+
+
+
     <script>
-    var app = new Vue({
-        el: '#book',
-        data:{
-            title: '',
-            subTitle:'',
-            cap:''
-            
-            
-        }
-    })
-  
+        var page = new Vue({
+            el: '#page',
+            data: {
+
+                title: 'Lorem Ipsum',
+                subTitle: 'Neque porro quisquam est qui',
+                paragraph: 'Donec eu lorem condimentum erat gravida iaculis in sit amet ex. Phasellus vestibulum justo vitae urna fringilla tincidunt. Aliquam eget luctus tellus, in pretium nunc. Donec dictum tellus sit amet turpis eleifend, vitae cursus velit molestie. Sed sit amet tellus mi. Aliquam erat volutpat. Pellentesque lacinia leo arcu, venenatis consequat metus suscipit eu. Fusce vitae nunc sed felis finibus rutrum ac in massa. Aenean accumsan feugiat varius. Cras at pretium mi, vel commodo justo. Pellentesque volutpat fermentum luctus. Suspendisse sit amet dui est. Curabitur vel venenatis nisi, quis maximus sem. Vivamus euismod varius dui at viverra. Integer finibus odio at arcu laoreet luctus et interdum tellus. Nam at leo gravida, ullamcorper justo eu, rhoncus justo.'
+
+                /* configurações de estilo da escrita */
+
+                ,
+
+                fontChanger: '',
+                pageTheme: {
+
+
+
+                    /* configurações de estilo da pagina */
+
+                }
+                ,
+                color: "default"
+
+
+
+            }
+        });
+
     </script>
 
 
-                
-               
 </body>
+
 </html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+  
+
+   
+    <script src="http://unpkg.com/vue"></script>
+
+
+
+</head>
+
+<body>
+    <div id="render-page">
+        <render-page>
+
+
+
+
+
+
+
+
+        </render-page>
+    </div>
+
+
+</body>
+
+
+<script>
+
+
+    Vue.component('render-page', {
+        data: function () {
+
+            return {
+                models: [
+                    { name: 'Desert'},
+                    { name: 'Haren' },
+                    { name: 'Abyss' },
+                    { name: 'Beach'}
+
+                ]
+
+
+            }
+
+        },
+
+        template: '<div class="desert"> <ul><li v-for="item in models" v-if="models.name == ">{{ item.name }}</li><ul></div>'
+
+        
+
+    })
+
+
+
+    new Vue({ el: '#render-page' })
+
+
+</script>
+</body>
+
+</html>
