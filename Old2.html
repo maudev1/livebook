@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Wellcome to LiveBook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="header">
+            <nav class="navbar navbar-light bg-light">
+                <h2>LiveBook</h2>    
+                
+                <form class="form-inline" onsubmit="return login();">
+                    <div class="input-group">
+                        
+                        
+
+                        <input type="text" class="form-control" id="email" placeholder="email">
+                        <input type="text" class="form-control" id="password" placeholder="password">
+                        
+                        <input type="submit" class="btn btn-dark" value="Login">
+                      
+                        </div>
+                    </form>
+                  </nav>
+
+    </div> 
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+               <div class="message">
+                <h1>Wellcome to LiveBook,<br> youre ready to start?</h1>
+                </div>
+            </div>
+            
+            <div class="col-sm-4">
+                <form class="fomulary" method="POST" action="index.html" onsubmit="return enviarDados();">
+                    <div class="form-group">
+                        <input class="form-control" id="name" name="name" type="text" placeholder="Name">
+                        <input class="form-control" id="lastName" name="lastName" type="text" placeholder="Last Name">
+                        <input class="form-control" id="email" name="email" type="email" placeholder="Email">
+                        <input class="form-control" id="password" name="password" type="password" placeholder="New password">
+                        
+                        <select class = "sex" name="sex" id="sex">
+                            <option value="F">Female</option>
+                            <option value="M">Male</option>
+                        </select>
+                        
+                        <input class="button bnt btn-dark" type="submit" value="Next">
+                        
+
+
+                    </div>
+
+
+
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+    
+    <div v-bind:style="styleObject"></div>
+    <div class="footer">
+            
+
+        <h6>MauDev 2018</h6>
+    </div>
+</body>
+</html>
